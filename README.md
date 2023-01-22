@@ -1,6 +1,9 @@
 # trim-quicktime
 AppleScript to trim and save selected video files with QuickTime Player on MacOS by time specification.
 
+## Demo
+![demo.gif](.demofile/demo_vscode.gif)
+
 ## Usage
 1. Open ```trim_qt.applescript``` in ScriptEditer or VScode and press the Run button
 2. Select the video file to be trimmed
