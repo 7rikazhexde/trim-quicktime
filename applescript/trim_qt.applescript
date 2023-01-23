@@ -16,7 +16,7 @@ Note:
 	Video formats other than MOV and MP4 have not been tested.
 
 Reference:
- 	1. AppleScript?mp4????????????
+ 	1. Batch cut unwanted parts of mp4 with AppleScript
 	https://golbitz.com/applescript/applescript%E3%81%A7mp4%E3%81%AE%E4%B8%8D%E8%A6%81%E3%81%AA%E9%83%A8%E5%88%86%E3%82%92%E4%B8%80%E6%8B%AC%E3%82%AB%E3%83%83%E3%83%88-624
 	2. apple script quicktime player export permission error
 	https://discussions.apple.com/thread/250200823	
@@ -24,9 +24,9 @@ Reference:
 	https://sites.google.com/site/zzaatrans/home/macautomationscriptingguide/referencefilesandfolders-html	
 	4. Technical Note TN2065 
 	https://sites.google.com/site/zzaatrans/home/doshellscriptinas_apple_2006-html/tn2065_apple	
-	5. [Linux] ?????????????
+	5. [Linux] Obtain the file size.
 	https://ameblo.jp/archive-redo-blog/entry-10196055325.html
-	6. ?????????
+	6. Find and Replace Strings
 	http://tonbi.jp/AppleScript/Tips/String/FindReplace.html
 ********************************************************)
 
@@ -78,7 +78,7 @@ Return:
  	replaceText: Substituted string
 	
 Reference:
-	6. ?????????
+	6. Find and Replace Strings
 ********************************************************)
 on replaceText(theText, serchStr, replaceStr)
 	set tmp to AppleScript's text item delimiters
@@ -104,11 +104,11 @@ Note:
 	If a file name contains a blank string, it is processed by replacing the blank string with "_".
 	
 Reference:
- 	1. AppleScript?mp4????????????
+ 	1. Batch cut unwanted parts of mp4 with AppleScript
 	2. apple script quicktime player export permission error
 	3. Referencing Files and Folders 
 	4. Technical Note TN2065 
-	5. [Linux] ?????????????
+	5. [Linux] Obtain the file size.
 ********************************************************)
 on trimVideo()
 	-- Set input file path
