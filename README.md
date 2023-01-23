@@ -12,9 +12,5 @@ AppleScript to trim and save selected video files with QuickTime Player on MacOS
 5. Enter the trim end time
 
 ## Note
-Verified Version
+#### Verified Version
 macOS Monterey (version 12.6)
-
-## Setting
-The script uses System Events. 
-To run System Events, you must allow security settings for the script editor. In System Preferences, go to Security and Privacy > Privacy > Accessibility > Allow Computer Control for Script Editor.

@@ -1,12 +1,12 @@
 (********************************************************
- Summary:
+Summary:
 	AppleScript to trim and save selected video files with QuickTime Player on MacOS by time specification.
  
- Verified Version:
+Verified Version:
 	macOS Monterey 
 	version 12.6
  
- Usage:
+Usage:
 	1. Select the video file to be trimmed
 	2. Specify the path (folder) to output files after trimming
 	3. Enter the trim start time
@@ -15,18 +15,18 @@
 Note:
 	Video formats other than MOV and MP4 have not been tested.
 
- Reference:
- 	1.Apple scriptでムービーをトリミング
+Reference:
+ 	1. AppleScript?mp4????????????
 	https://golbitz.com/applescript/applescript%E3%81%A7mp4%E3%81%AE%E4%B8%8D%E8%A6%81%E3%81%AA%E9%83%A8%E5%88%86%E3%82%92%E4%B8%80%E6%8B%AC%E3%82%AB%E3%83%83%E3%83%88-624
-	2.apple script quicktime player export permission error
+	2. apple script quicktime player export permission error
 	https://discussions.apple.com/thread/250200823	
-	3.Referencing Files and Folders 
+	3. Referencing Files and Folders 
 	https://sites.google.com/site/zzaatrans/home/macautomationscriptingguide/referencefilesandfolders-html	
-	4.Technical Note TN2065 
+	4. Technical Note TN2065 
 	https://sites.google.com/site/zzaatrans/home/doshellscriptinas_apple_2006-html/tn2065_apple	
-	5.[Linux] ファイルサイズを取得する。
-	hhttps://ameblo.jp/archive-redo-blog/entry-10196055325.html
-	6.文字列の検索・置換
+	5. [Linux] ?????????????
+	https://ameblo.jp/archive-redo-blog/entry-10196055325.html
+	6. ?????????
 	http://tonbi.jp/AppleScript/Tips/String/FindReplace.html
 ********************************************************)
 
@@ -66,19 +66,19 @@ on askTrimTime(message)
 end askTrimTime
 
 (******************************************************** 
- Function:
+Function:
  	replaceText(): Function to replace a string with a specified string
 	
- Argument:
+Argument:
 	theText: original string
 	serchStr:	 String to be replaced
 	replaceStr: Replaced string
 	
- Return:
+Return:
  	replaceText: Substituted string
 	
- Reference:
-	6.文字列の検索・置換
+Reference:
+	6. ?????????
 ********************************************************)
 on replaceText(theText, serchStr, replaceStr)
 	set tmp to AppleScript's text item delimiters
@@ -104,11 +104,11 @@ Note:
 	If a file name contains a blank string, it is processed by replacing the blank string with "_".
 	
 Reference:
-	1.Apple scriptでムービーをトリミング
-	2.apple script quicktime player export permission error
-	3.Referencing Files and Folders 
-	4.Technical Note TN2065 
-	5.[Linux] ファイルサイズを取得する。
+ 	1. AppleScript?mp4????????????
+	2. apple script quicktime player export permission error
+	3. Referencing Files and Folders 
+	4. Technical Note TN2065 
+	5. [Linux] ?????????????
 ********************************************************)
 on trimVideo()
 	-- Set input file path
@@ -156,7 +156,6 @@ on trimVideo()
 		open file inFilePath
 		
 		-- Set trimming and export video file
-		-- Trim front document from 0 to 1000
 		trim front document from startTime to endTime
 		export front document in outFilePath using settings preset "480p"
 		
@@ -200,12 +199,13 @@ end trimVideo
 (********************************************************
 Function:
 	main():
-	Trim and save the selected video file with QuickTime Player on MacOS. main function to trim and save the file.
+	Trim and save the selected video file with QuickTime Player on MacOS. 
+	main function to trim and save the file.
 	
-Argument
+Argument:
 	none
 	
-Return
+Return:
 	none
 ********************************************************)
 on main()
